@@ -1,5 +1,5 @@
 import React from 'react';
-import { OliveBranch } from './Ornaments';
+import { OliveBranch, LemonSlice } from './Ornaments';
 
 const EventCard: React.FC<{ title: string; date: string; time: string; location: string; address: string }> = ({ title, date, time, location, address }) => (
     <div className="w-full md:w-1/2 p-2 md:p-4">
@@ -16,8 +16,10 @@ const EventCard: React.FC<{ title: string; date: string; time: string; location:
 
 const EventDetails: React.FC = () => {
   return (
-    <section id="acara" className="py-16 px-4 md:py-20 md:px-8 bg-transparent relative">
+    <section id="acara" className="py-16 px-4 md:py-20 md:px-8 bg-transparent relative overflow-hidden">
+      <LemonSlice className="absolute -top-10 -left-10 w-32 h-32 text-gold opacity-10 rotate-12" />
       <OliveBranch className="absolute bottom-0 -left-12 text-gold opacity-10 transform rotate-90 scale-75" />
+      <OliveBranch className="absolute top-0 -right-12 text-gold opacity-10 transform -rotate-90 scale-75" />
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="font-serif text-3xl md:text-5xl text-gold mb-8 md:mb-12">Detail Acara</h2>
         <div className="flex flex-col md:flex-row -m-2 md:-m-4">

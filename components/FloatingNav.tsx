@@ -10,7 +10,11 @@ const navItems = [
     { id: 'gallery', icon: <GalleryIcon className="w-6 h-6" /> },
 ];
 
-const FloatingNav: React.FC = () => {
+interface FloatingNavProps {
+    onNavClick: () => void;
+}
+
+const FloatingNav: React.FC<FloatingNavProps> = ({ onNavClick }) => {
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const observer = useRef<IntersectionObserver | null>(null);
     const sectionElements = useRef<Map<string, HTMLElement>>(new Map());
@@ -55,6 +59,7 @@ const FloatingNav: React.FC = () => {
 
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
+        onNavClick();
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });

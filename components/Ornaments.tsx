@@ -32,3 +32,42 @@ export const LeafyDivider: React.FC<{className?: string}> = ({ className }) => (
         <path d="M 100 10 C 105 15, 110 15, 120 10" />
     </svg>
 );
+
+export const Sunflower: React.FC<{className?: string}> = ({ className }) => (
+    <svg className={className} viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="15" fill="#6B4F2F"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(0 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(30 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(60 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(90 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(120 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(150 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(180 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(210 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(240 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(270 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(300 50 50)"/>
+        <path d="M50 0 L45 30 H 55 Z" transform="rotate(330 50 50)"/>
+    </svg>
+);
+
+export const LemonSlice: React.FC<{className?: string}> = ({ className }) => (
+    <svg className={className} viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45"/>
+        <circle cx="50" cy="50" r="35" strokeWidth="2"/>
+        <path d="M50 15 V 85"/>
+        <path d="M15 50 H 85"/>
+        <path d="M25 25 L 75 75"/>
+        <path d="M25 75 L 75 25"/>
+    </svg>
+);
+
+export const LeafyVine: React.FC<{className?: string}> = ({ className }) => (
+    <svg className={className} viewBox="0 0 200 50" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 25 Q 50 0, 100 25 T 200 25" strokeWidth="1.5"/>
+        <path d="M 40 12 A 10 10 0 0 1 50 20" />
+        <path d="M 60 38 A 10 10 0 0 0 50 30" />
+        <path d="M 140 12 A 10 10 0 0 1 150 20" />
+        <path d="M 160 38 A 10 10 0 0 0 150 30" />
+    </svg>
+);

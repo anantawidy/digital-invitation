@@ -1,5 +1,5 @@
 import React from 'react';
-import { FloralCorner } from './Ornaments';
+import { FloralCorner, LeafyVine } from './Ornaments';
 
 const ProfileCard: React.FC<{ name: string, childDescription: string, parents: string, initial: string }> = ({ name, childDescription, parents, initial }) => {
     const nameParts = name.split(',');
@@ -31,6 +31,7 @@ const BrideGroom: React.FC = () => {
         <FloralCorner className="absolute bottom-8 right-0 w-24 h-24 text-gold opacity-20" />
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="font-serif text-3xl md:text-5xl text-gold mb-2">Pasangan Mempelai</h2>
+        <LeafyVine className="w-48 mx-auto my-4 text-gold opacity-30" />
          <p className="font-sans text-sm md:text-base text-seashell mb-8 md:mb-12">Dengan Rahmat Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
         <div className="flex flex-col md:flex-row -m-2 md:-m-4">
            <ProfileCard 

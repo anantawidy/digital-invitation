@@ -1,9 +1,11 @@
 import React from 'react';
-import { LeafyDivider } from './Ornaments';
+import { LeafyDivider, Sunflower } from './Ornaments';
 
 const Quote: React.FC = () => {
   return (
-    <section id="quote" className="py-16 px-4 md:py-20 md:px-8 text-center bg-transparent relative">
+    <section id="quote" className="py-16 px-4 md:py-20 md:px-8 text-center bg-transparent relative overflow-hidden">
+      <Sunflower className="absolute -top-8 -left-8 w-32 h-32 text-gold opacity-10 -rotate-45" />
+      <Sunflower className="absolute -bottom-8 -right-8 w-32 h-32 text-gold opacity-10 rotate-135" />
       <div className="max-w-3xl mx-auto relative">
         <div className="border-t border-b border-gold/50 py-8">
             <p className="font-serif text-xl md:text-3xl italic text-seashell leading-relaxed">

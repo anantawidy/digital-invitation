@@ -1,10 +1,11 @@
 import React from 'react';
-import { OliveBranch } from './Ornaments';
+import { OliveBranch, LeafyVine } from './Ornaments';
 
 const Footer: React.FC = () => {
   return (
     <footer className="pt-16 pb-40 px-4 md:pt-20 md:pb-28 md:px-8 text-center bg-transparent text-seashell/80 relative overflow-hidden">
       <div className="max-w-3xl mx-auto relative">
+        <LeafyVine className="w-48 mx-auto mb-6 text-gold opacity-30"/>
         <p className="text-xs md:text-sm leading-relaxed">
           Terima kasih atas doa dan restu yang telah diberikan. Merupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.
         </p>

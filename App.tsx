@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Cover from './components/Cover';
 import Quote from './components/Quote';
 import CountdownTimer from './components/CountdownTimer';
@@ -16,6 +16,14 @@ const App: React.FC = () => {
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
   const [audio] = useState(new Audio('https://cdn.jsdelivr.net/gh/anantawidy/wedding-music@main/Nadhif%20Basalamah%20-%20bergema%20sampai%20selamanya%20(Official%20Lyric%20Video).mp3'));
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(false);
+  const scrollAnimationRef = useRef<number | null>(null);
+
+  const stopAutoScrolling = useCallback(() => {
+    if (isAutoScrolling) {
+      setIsAutoScrolling(false);
+    }
+  }, [isAutoScrolling]);
 
   useEffect(() => {
     audio.loop = true;
@@ -34,6 +42,8 @@ const App: React.FC = () => {
     setIsInvitationOpen(true);
     setIsPlaying(true);
     document.body.style.overflow = 'auto';
+    // Delay auto-scroll to let initial animations finish
+    setTimeout(() => setIsAutoScrolling(true), 2500);
   };
   
   useEffect(() => {
@@ -44,6 +54,43 @@ const App: React.FC = () => {
       }
     }
   }, [isInvitationOpen]);
+
+  // Auto-scroll logic
+  useEffect(() => {
+    const scrollStep = 0.5; // Adjust for desired slowness
+
+    const autoScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        setIsAutoScrolling(false);
+        return;
+      }
+      window.scrollBy(0, scrollStep);
+      scrollAnimationRef.current = requestAnimationFrame(autoScroll);
+    };
+
+    if (isAutoScrolling) {
+      scrollAnimationRef.current = requestAnimationFrame(autoScroll);
+    } else if (scrollAnimationRef.current) {
+      cancelAnimationFrame(scrollAnimationRef.current);
+    }
+
+    return () => {
+      if (scrollAnimationRef.current) {
+        cancelAnimationFrame(scrollAnimationRef.current);
+      }
+    };
+  }, [isAutoScrolling]);
+
+  // Stop auto-scroll on user interaction
+  useEffect(() => {
+    const events: (keyof WindowEventMap)[] = ['wheel', 'touchstart', 'keydown'];
+    events.forEach(event => window.addEventListener(event, stopAutoScrolling));
+
+    return () => {
+      events.forEach(event => window.removeEventListener(event, stopAutoScrolling));
+    };
+  }, [stopAutoScrolling]);
+
 
   const toggleMusic = () => {
     setIsPlaying(!isPlaying);
@@ -73,7 +120,7 @@ const App: React.FC = () => {
       
       {isInvitationOpen && (
         <>
-          <FloatingNav />
+          <FloatingNav onNavClick={stopAutoScrolling} />
           <button 
             onClick={toggleMusic} 
             className="fixed bottom-20 md:bottom-4 right-4 bg-deep-olive text-seashell p-3 rounded-full shadow-lg z-50 transition-transform duration-300 hover:scale-110"
