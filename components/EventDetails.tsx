@@ -37,7 +37,7 @@ const EventDetails: React.FC = () => {
           />
         </div>
         <a 
-          href="https://maps.app.goo.gl/ZU9dTVzVdGhZVzzi8" 
+          href="https://maps.app.goo.gl/tSwNnuRo3uY4vEWN9" 
           target="_blank" 
           rel="noopener noreferrer"
           className="mt-8 md:mt-12 inline-block bg-deep-olive text-seashell font-sans px-8 py-3 rounded-md shadow-md hover:opacity-90 transition-all duration-300 transform hover:scale-105"
