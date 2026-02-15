@@ -125,10 +125,7 @@ const RsvpSection: React.FC = () => {
           {!isLoading && error && <p className="text-red-400 text-center">{error}</p>}
           {wishes.map(wish => (
             <div key={wish.id} className="bg-card-bg p-4 rounded-lg shadow-sm border border-gold/30 fade-in-fast">
-              <div className="flex justify-between items-center mb-2">
-                <p className="font-bold text-seashell">{wish.name} <span className={`text-xs font-normal px-2 py-0.5 rounded-full ${wish.attendance === 'Hadir' ? 'bg-deep-olive/70 text-white' : 'bg-red-500/70 text-white'}`}>{wish.attendance}</span></p>
-                <p className="text-xs text-seashell/60">{new Date(wish.createdAt).toLocaleDateString('id-ID')}</p>
-              </div>
+              <p className="font-bold text-seashell mb-2">{wish.name} <span className={`text-xs font-normal px-2 py-0.5 rounded-full ${wish.attendance === 'Hadir' ? 'bg-deep-olive/70 text-white' : 'bg-red-500/70 text-white'}`}>{wish.attendance}</span></p>
               <p className="text-seashell/90 italic">"{wish.message}"</p>
             </div>
           ))}

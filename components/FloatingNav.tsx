@@ -36,8 +36,8 @@ const FloatingNav: React.FC<FloatingNavProps> = ({ onNavClick }) => {
                 }
             },
             { 
-                rootMargin: '-40% 0px -40% 0px', 
-                threshold: 0.2
+                rootMargin: '-30% 0px -30% 0px', 
+                threshold: 0
             }
         );
 
