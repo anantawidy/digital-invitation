@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ginnia & Ananta Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --old-burgundy: #43302E;
+        --gold: #D4AF37;
+        --deep-olive: #556B2F;
+        --seashell: #F1F1F1;
+        --card-bg: rgba(241, 241, 241, 0.05);
+      }
+      body {
+        background-color: var(--old-burgundy);
+        color: var(--seashell);
+        font-family: 'Montserrat', sans-serif;
+      }
+      .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+      }
+      .font-sans {
+        font-family: 'Montserrat', sans-serif;
+      }
+      .fade-in {
+        animation: fadeIn 1.5s ease-in-out forwards;
+      }
+      .fade-in-delay {
+        animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+      }
+      .fade-in-slow {
+        animation: fadeIn 2s ease-in-out forwards;
+      }
+      .fade-in-fast {
+        animation: fadeInFast 0.3s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes fadeInFast {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'old-burgundy': 'var(--old-burgundy)',
+              'gold': 'var(--gold)',
+              'deep-olive': 'var(--deep-olive)',
+              'seashell': 'var(--seashell)',
+              'card-bg': 'var(--card-bg)',
+            },
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'serif'],
+              sans: ['Montserrat', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
