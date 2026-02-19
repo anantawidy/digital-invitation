@@ -13,17 +13,13 @@ import { MusicIcon, MuteIcon } from './components/Icons';
 import FloatingNav from './components/FloatingNav';
 
 const App: React.FC = () => {
-  const [guestName, setGuestName] = useState('Guest');
+  const [guestName, setGuestName] = useState('');
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const nameFromUrl = urlParams.get('to');
-    if (nameFromUrl) {
-      // Replace hyphens with spaces for multi-word names
-      const formattedName = nameFromUrl.replace(/-/g, ' ');
-      setGuestName(formattedName);
-    } else {
-      setGuestName('Guest'); // Default name if 'to' param is not present
+    const name = urlParams.get('to');
+    if (name) {
+      setGuestName(name);
     }
   }, []);
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
