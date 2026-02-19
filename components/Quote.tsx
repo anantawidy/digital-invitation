@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeafyDivider, Sunflower } from './Ornaments';
+import { Sunflower } from './Ornaments';
 
 const Quote: React.FC = () => {
   return (
@@ -20,7 +20,11 @@ const Quote: React.FC = () => {
             <p className="mt-4 font-sans font-semibold text-gold text-base md:text-lg">(Ar-Rum: 21)</p>
 
         </div>
-        <LeafyDivider className="w-40 mx-auto mt-8 text-gold opacity-50"/>
+        <svg className="w-40 mx-auto mt-8 text-gold opacity-50" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+          <path d="M 10 10 H 190" strokeWidth="0.5" />
+          <path d="M 80 10 C 90 5, 95 5, 100 10" />
+          <path d="M 100 10 C 105 15, 110 15, 120 10" />
+        </svg>
       </div>
     </section>
   );
