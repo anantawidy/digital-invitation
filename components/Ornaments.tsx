@@ -25,11 +25,11 @@ export const FloralCorner: React.FC<{className?: string}> = ({ className }) => (
     </svg>
 );
 
-export const LeafyDivider: React.FC<{className?: string}> = ({ className }) => (
-     <svg className={className} viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
-        <path d="M 10 10 H 190" strokeWidth="0.5" />
-        <path d="M 80 10 C 90 5, 95 5, 100 10" />
-        <path d="M 100 10 C 105 15, 110 15, 120 10" />
+export const OrnamentalDivider: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} width="200" height="20" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10H80" stroke="currentColor" strokeOpacity="0.5" strokeWidth="0.5" />
+        <path d="M120 10H200" stroke="currentColor" strokeOpacity="0.5" strokeWidth="0.5" />
+        <path d="M90 10C92.5 7.5 97.5 7.5 100 10C102.5 12.5 107.5 12.5 110 10" stroke="currentColor" strokeOpacity="0.8" strokeWidth="0.75"/>
     </svg>
 );
 

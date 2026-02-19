@@ -13,6 +13,15 @@ import { MusicIcon, MuteIcon } from './components/Icons';
 import FloatingNav from './components/FloatingNav';
 
 const App: React.FC = () => {
+  const [guestName, setGuestName] = useState('Guest');
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('to');
+    if (name) {
+      setGuestName(name);
+    }
+  }, []);
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
   const [audio] = useState(new Audio('https://cdn.jsdelivr.net/gh/anantawidy/wedding-music@main/Nadhif%20Basalamah%20-%20bergema%20sampai%20selamanya%20(Official%20Lyric%20Video).mp3'));
   const [isPlaying, setIsPlaying] = useState(false);
@@ -104,7 +113,7 @@ const App: React.FC = () => {
 
   return (
     <div className="text-seashell font-sans relative overflow-x-hidden">
-      {!isInvitationOpen && <Cover onOpen={handleOpenInvitation} />}
+      {!isInvitationOpen && <Cover onOpen={handleOpenInvitation} guestName={guestName} />}
 
       <main className={`transition-opacity duration-1000 ${isInvitationOpen ? 'opacity-100' : 'opacity-0'} relative`}>
         <Quote />

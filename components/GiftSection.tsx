@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CopyIcon, CheckIcon, BankIcon } from './Icons';
-import { LeafyDivider, Sunflower } from './Ornaments';
+import { OrnamentalDivider, Sunflower } from './Ornaments';
 
 const AccountCard: React.FC<{ logo: React.ReactNode; bankName: string; accNumber: string; accName: string }> = ({ logo, bankName, accNumber, accName }) => {
     const [copied, setCopied] = useState(false);
@@ -55,7 +55,7 @@ const GiftSection: React.FC = () => {
                     <AccountCard logo={<BankIcon className="h-8 w-8 md:h-12 md:w-12 text-gold"/>} bankName="Seabank" accNumber="901803655806" accName="Alfath Rohmah Citra Ginnia" />
                     <AccountCard logo={<BankIcon className="h-8 w-8 md:h-12 md:w-12 text-gold"/>} bankName="BCA" accNumber="7151542704" accName="Ananta Widyaswara" />
                 </div>
-                <LeafyDivider className="w-32 mx-auto mt-6 text-gold opacity-30"/>
+                <OrnamentalDivider className="w-32 mx-auto mt-6 text-gold opacity-30"/>
             </div>
 
             {/* Hadiah Card */}
@@ -85,7 +85,7 @@ const GiftSection: React.FC = () => {
                 >
                     Lihat Daftar Hadiah
                 </a>
-                 <LeafyDivider className="w-32 mx-auto mt-6 text-gold opacity-30"/>
+                 <OrnamentalDivider className="w-32 mx-auto mt-6 text-gold opacity-30"/>
             </div>
         </div>
       </div>

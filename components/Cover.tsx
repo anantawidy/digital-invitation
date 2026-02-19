@@ -1,7 +1,7 @@
 import React from 'react';
 import { OliveBranch } from './Ornaments';
 
-const Cover: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
+const Cover: React.FC<{ onOpen: () => void; guestName: string }> = ({ onOpen, guestName }) => {
   return (
     <div className="fixed inset-0 bg-old-burgundy/80 backdrop-blur-sm flex flex-col items-center justify-center text-center p-4 md:p-8 z-50 h-screen overflow-hidden">
         <div className="relative z-10">
@@ -13,9 +13,10 @@ const Cover: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
             </h1>
             <p className="font-sans text-lg md:text-xl text-seashell fade-in-slow">04 April 2026</p>
             
-            <div className='mt-6 md:mt-8 fade-in-slow'>
-                <p className="italic text-sm md:text-base text-seashell">"A Love That Transcends Time and Lives in Perfect Harmony"</p>
-                <p className="font-bold text-base md:text-lg text-seashell mt-2">#theHarmoNIAofANANTA</p>
+            <div className='mt-6 md:mt-8 fade-in-slow text-center'>
+                <p className="font-sans text-sm md:text-base text-seashell mb-2">Specially for</p>
+                <p className="font-serif text-xl md:text-2xl text-gold font-bold">{guestName}</p>
+                <p className="font-bold text-base md:text-lg text-seashell mt-4">#theHarmoNIAofANANTA</p>
             </div>
 
             <button

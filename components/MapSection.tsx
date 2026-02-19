@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeafyDivider } from './Ornaments';
+import { OrnamentalDivider } from './Ornaments';
 
 const MapSection: React.FC = () => {
   const mapEmbedUrl = `https://maps.google.com/maps?q=Masjid%20Jami'%20Baiturrahman%2C%20Jl.%20Bukit%20Cinere%20Raya%20No.150C%2C%20Gandul%2C%20Kec.%20Cinere%2C%20Kota%20Depok%2C%20Jawa%20Barat%2016514&z=17&output=embed`;
@@ -21,7 +21,7 @@ const MapSection: React.FC = () => {
             title="Lokasi Pernikahan"
           ></iframe>
         </div>
-        <LeafyDivider className="w-40 mx-auto my-8 text-gold opacity-30"/>
+        <OrnamentalDivider className="w-40 mx-auto my-8 text-gold opacity-30"/>
         <a 
           href={mapDirectUrl}
           target="_blank" 

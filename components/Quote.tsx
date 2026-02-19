@@ -7,11 +7,18 @@ const Quote: React.FC = () => {
       <Sunflower className="absolute -top-8 -left-8 w-32 h-32 text-gold opacity-10 -rotate-45" />
       <Sunflower className="absolute -bottom-8 -right-8 w-32 h-32 text-gold opacity-10 rotate-135" />
       <div className="max-w-3xl mx-auto relative">
-        <div className="border-t border-b border-gold/50 py-8">
+        <div className="border-t border-b border-gold/50 py-8 space-y-6">
+            <p className="italic text-sm md:text-base text-seashell">"A Love That Transcends Time and Lives in Perfect Harmony"</p>
+            <div className="flex items-center justify-center text-gold/80 my-4">
+                <span className="flex-grow h-px bg-gold/50"></span>
+                <span className="mx-4 text-2xl">✦</span>
+                <span className="flex-grow h-px bg-gold/50"></span>
+            </div>
             <p className="font-serif text-xl md:text-3xl italic text-seashell leading-relaxed">
             "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
             </p>
             <p className="mt-4 font-sans font-semibold text-gold text-base md:text-lg">(Ar-Rum: 21)</p>
+
         </div>
         <LeafyDivider className="w-40 mx-auto mt-8 text-gold opacity-50"/>
       </div>

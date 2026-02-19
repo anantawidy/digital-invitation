@@ -1,6 +1,6 @@
 import React, { useState, FormEvent, useEffect } from 'react';
 import type { RsvpEntry } from '../types';
-import { LeafyDivider } from './Ornaments';
+import { OrnamentalDivider } from './Ornaments';
 
 const RsvpSection: React.FC = () => {
   const [wishes, setWishes] = useState<RsvpEntry[]>([]);
@@ -71,7 +71,7 @@ const RsvpSection: React.FC = () => {
   return (
     <section id="rsvp" className="py-16 px-4 md:py-20 md:px-8 bg-transparent">
       <div className="max-w-2xl mx-auto text-center">
-        <LeafyDivider className="w-40 mx-auto mb-4 text-gold opacity-50" />
+        <OrnamentalDivider className="w-40 mx-auto mb-4 text-gold opacity-50" />
         <h2 className="font-serif text-3xl md:text-5xl text-gold mb-8">Ucapan & Doa</h2>
         <div className="bg-card-bg p-6 md:p-8 rounded-lg shadow-sm backdrop-blur-sm border border-gold/50">
           <form onSubmit={handleSubmit} className="space-y-4 text-left">
