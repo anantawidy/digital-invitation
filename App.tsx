@@ -17,9 +17,13 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const name = urlParams.get('to');
-    if (name) {
-      setGuestName(name);
+    const nameFromUrl = urlParams.get('to');
+    if (nameFromUrl) {
+      // Replace hyphens with spaces for multi-word names
+      const formattedName = nameFromUrl.replace(/-/g, ' ');
+      setGuestName(formattedName);
+    } else {
+      setGuestName('Guest'); // Default name if 'to' param is not present
     }
   }, []);
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
