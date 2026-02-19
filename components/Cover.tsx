@@ -14,10 +14,14 @@ const Cover: React.FC<{ onOpen: () => void; guestName: string }> = ({ onOpen, gu
             <p className="font-sans text-lg md:text-xl text-seashell fade-in-slow">04 April 2026</p>
             
             <div className='mt-6 md:mt-8 fade-in-slow text-center'>
-                <p className="font-sans text-sm md:text-base text-seashell mb-2">Specially for</p>
-                <p className="font-serif text-xl md:text-2xl text-gold font-bold">
-                    {guestName ? guestName.replace(/-/g, ' ') : 'Guest'}
-                </p>
+                {guestName && (
+                    <>
+                        <p className="font-sans text-sm md:text-base text-seashell mb-2">Specially for</p>
+                        <p className="font-serif text-xl md:text-2xl text-gold font-bold">
+                            {guestName.replace(/-/g, ' ')}
+                        </p>
+                    </>
+                )}
                 <p className="font-bold text-base md:text-lg text-seashell mt-4">#theHarmoNIAofANANTA</p>
             </div>
 
