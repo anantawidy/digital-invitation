@@ -66,7 +66,7 @@ const App: React.FC = () => {
 
   // Auto-scroll logic
   useEffect(() => {
-    const scrollStep = 0.5; // Adjust for desired slowness
+    const scrollStep = 1.5; // Adjust for desired slowness
 
     const autoScroll = () => {
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {

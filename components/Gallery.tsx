@@ -3,12 +3,11 @@ import { FloralCorner } from './Ornaments';
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from './Icons';
 
 const galleryImages = [
-  'https://lh3.googleusercontent.com/d/1G9BN8TkQzkV82etdkuT0pQmRKuc1gEtx',
-  'https://lh3.googleusercontent.com/d/1_cVXMb0hfbtnuQb0u9etZlkKk68MNcv7',
-  'https://lh3.googleusercontent.com/d/19yf-I9HcVkH64JBMa4H2DsBwwmTS3ZuC',
-  'https://lh3.googleusercontent.com/d/1w6odDl3hxVgDGSvAJcH1_m0rgjnqmnJR',
-  'https://lh3.googleusercontent.com/d/1kftHNGV6PG-8BYpGbKI0ffG2xPLj6-QA',
   'https://lh3.googleusercontent.com/d/1ol1IOKwalb61QoXQZgMSOAjQPJ_jaWox',
+  'https://lh3.googleusercontent.com/d/1kftHNGV6PG-8BYpGbKI0ffG2xPLj6-QA',
+  'https://lh3.googleusercontent.com/d/1w6odDl3hxVgDGSvAJcH1_m0rgjnqmnJR',
+  'https://lh3.googleusercontent.com/d/1G9BN8TkQzkV82etdkuT0pQmRKuc1gEtx',
+  'https://lh3.googleusercontent.com/d/13GolDBQza9lQnCFj1vQHyi_Tx42oTfB7',
 ];
 
 const Gallery: React.FC = () => {

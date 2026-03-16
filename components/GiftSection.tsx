@@ -66,7 +66,7 @@ const GiftSection: React.FC = () => {
                     <p className="text-xs md:text-sm text-seashell">
                         {shippingAddress}
                         <br />
-                        (Atas Nama: Ginnia)
+                        (Atas nama: Ginnia/Widy)
                     </p>
                     <button 
                         onClick={handleCopyAddress} 
