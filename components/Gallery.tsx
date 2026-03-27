@@ -8,6 +8,7 @@ const galleryImages = [
   'https://lh3.googleusercontent.com/d/1w6odDl3hxVgDGSvAJcH1_m0rgjnqmnJR',
   'https://lh3.googleusercontent.com/d/1G9BN8TkQzkV82etdkuT0pQmRKuc1gEtx',
   'https://lh3.googleusercontent.com/d/13GolDBQza9lQnCFj1vQHyi_Tx42oTfB7',
+  'https://lh3.googleusercontent.com/d/1n9TRy_UIpC1VX4mEMfg-YOWmJ_nL5tfu',
 ];
 
 const Gallery: React.FC = () => {
